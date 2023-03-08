@@ -3,7 +3,7 @@
 
 if [ $1 == "query" ]; then
 	volume=$(pamixer --get-volume-human)
-	echo "vol: $volume"
+	echo "🔊 $volume"
 else
 	#paplay /usr/share/sounds/Yaru/stereo/audio-volume-change.oga
 	if [ $1 == "inc" ];then

@@ -8,4 +8,4 @@ size = str(subprocess.getoutput("duf -output size -style ascii / | tail -2").rep
 used = used.replace("\n","").replace(" ","")
 size = size.replace("\n","").replace(" ","")
 
-print(used+"-"+size)
+print("💾 "+used+"-"+size)

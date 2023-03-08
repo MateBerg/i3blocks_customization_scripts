@@ -8,7 +8,7 @@ time_out = subprocess.getoutput(command)
 if ":" in time_out :
 	# mins and hours 
 	hours, mins = time_out.split(":")
-	print(f"up:{hours}h {mins}m")
+	print(f"⏳ {hours}h {mins}m")
 else:
 	# mins only
-	print(f"up:0h {time_out}m")
+	print(f"⏳ 0h {time_out}m")
