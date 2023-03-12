@@ -13,6 +13,7 @@ LOCATION = "Cairo"
 
 # Emojis for different weather conditions
 emojis = {
+    "Sunny": "☀️",
     "Clear": "☀️",
     "Partly cloudy": "⛅",
     "Cloudy": "☁️",
@@ -60,5 +61,5 @@ emoji = emojis.get(condition, "🤔")
 
 # Print formatted weather information
 print(f"{temp_c}°C {emoji} {condition} {humidity}")
-command = f"notify-send 'Temp.:🌡️ {int(temp_c)} °C  \nCond.: {emoji} {condition} \nHum.:💧 {humidity}%'"
+command = f"notify-send '🌡️T: {int(temp_c)}°C | {emoji} {condition} | H:💧{humidity}%'"
 subprocess.call(command,  shell=True)
