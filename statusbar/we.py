@@ -6,7 +6,7 @@ import subprocess
 import time 
 
 # Your weather API key here
-API_KEY = "333cb1cac23c4e1ca88205459231103"
+API_KEY = "Your_API_Here"
 
 # Your location here
 LOCATION = "Cairo"
