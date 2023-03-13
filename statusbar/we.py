@@ -59,7 +59,21 @@ condition = data["current"]["condition"]["text"]
 humidity = data["current"]["humidity"]
 emoji = emojis.get(condition, "🤔")
 
+# Bitcoin Info
+response2 = requests.get('https://api.coinbase.com/v2/prices/spot?currency=USD')
+data = json.loads(response2.text)
+price = data['data']['amount']
+
+# USD to EGP info
+# Make API request to get USD to EGP exchange rate
+response3 = requests.get('https://api.exchangerate-api.com/v4/latest/USD')
+data = response3.json()
+# Get USD to EGP exchange rate
+rate = data['rates']['EGP']
+
+
+
 # Print formatted weather information
 print(f"{temp_c}°C {emoji} {condition} {humidity}")
-command = f"notify-send '🌡️T: {int(temp_c)}°C | {emoji} {condition} | H:💧{humidity}%'"
+command = f"notify-send '🌡️T: {int(temp_c)}°C | {emoji} {condition} | H:💧{humidity}% \n 1 🇺🇸 = {rate} 🇪🇬 | 🪙 {price} 💲 '"
 subprocess.call(command,  shell=True)
