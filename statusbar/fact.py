@@ -5,7 +5,7 @@ import time
 
 limit = 1
 api_url = 'https://api.api-ninjas.com/v1/facts?limit={}'.format(limit)
-response = requests.get(api_url, headers={'X-Api-Key': 'eNOqkT4Ykl5E4xnoYF3BW2l64a7QKv2TkhMLw03j'})
+response = requests.get(api_url, headers={'X-Api-Key': 'Your_API_Here'})
 
 new_text = response.text.replace("[{\"fact\": \"", "")
 new_text = new_text.replace("\"}]", ".")
